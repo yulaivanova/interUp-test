@@ -1,0 +1,14 @@
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $dark-gray;
+  background-color: $gray;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Acumin";
+  src: url("../fonts/acumin-regular.woff2") format("woff2"),
+    url("../fonts/acumin-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acumin";
+  src: url("../fonts/acumin-bold.woff2") format("woff2"),
+    url("../fonts/acumin-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

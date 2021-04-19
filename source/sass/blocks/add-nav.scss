@@ -1,0 +1,44 @@
+
+.add-nav__column {
+  @include list-reset;
+  margin-right: 38px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 19px;
+  }
+}
+
+.add-nav__link {
+  color: $light-gray;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.add-nav--header .add-nav__link {
+  color: $white;
+  opacity: 0.5;
+}
+
+.add-nav--header .add-nav__column {
+  width: 50%;
+}
+
+.add-nav__item {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+}

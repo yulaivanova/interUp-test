@@ -1,0 +1,132 @@
+.header__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px 20px 4px;
+
+  background-color: $gray;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: row;
+  }
+}
+
+.header__add-block {
+  display: none;
+}
+
+@media (max-width: $mobile-width) {
+  .header--opened {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    z-index: 70;
+
+    overflow-y: auto;
+    background-color: $gray;
+  }
+
+  .header--opened .header__inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 287px;
+    box-sizing: border-box;
+
+    padding: 0;
+
+    box-shadow: 0 0 60px #00000099;
+  }
+
+  .header--nojs .header__inner {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header--opened .header__logo {
+    margin-left: 0;
+    margin-right: auto;
+
+    color: $pink;
+
+    padding-bottom: 87px;
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+
+  .header--opened .header__login {
+    display: none;
+  }
+
+  .header--opened .header__add-block {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.23);
+
+    padding: 60px 55px 0 40px;
+  }
+
+  .header--opened .header__add-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header--opened .header__social {
+    margin-bottom: 40px;
+  }
+
+
+  .header--nojs {
+    position: static;
+    min-height: auto;
+  }
+}
+
+.header__logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+
+  color: $pink;
+
+  margin-right: 20px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: calc(50% - 20px);
+    color: $dark-gray;
+  }
+}
+
+.header__login img {
+  border-radius: 50%;
+
+  @media (max-width: $mobile-width) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.header__login-link {
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}

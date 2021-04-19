@@ -1,0 +1,298 @@
+.now-block {
+  max-width: 1200px;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding: 40px 20px 100px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 80px 80px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 24px 0;
+  }
+}
+
+.now-block__inner {
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.now-block__column {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.now-block__column--large {
+  width: 100%;
+  max-width: 760px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+}
+
+.now-block__column--small {
+  min-width: 360px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    min-width: auto;
+  }
+}
+
+.now-block__item--large-1 {
+  background-image: url("../img/large-article-1-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/large-article-1-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/large-article-1-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-1-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/large-article-1-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-1-mobile@2x.jpg");
+    }
+  }
+}
+
+.webp .now-block__item--large-1 {
+  background-image: url("../img/large-article-1-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/large-article-1-desktop@2x.webp");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/large-article-1-tablet@1x.webp");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-1-tablet@2x.webp");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/large-article-1-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-1-mobile@2x.webp");
+    }
+  }
+}
+
+.now-block__item--large-2 {
+  background-image: url("../img/large-article-2-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/large-article-2-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/large-article-2-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-2-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/large-article-2-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-2-mobile@2x.jpg");
+    }
+  }
+}
+
+.webp .now-block__item--large-2 {
+  background-image: url("../img/large-article-2-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/large-article-2-desktop@2x.webp");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/large-article-2-tablet@1x.webp");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-2-tablet@2x.webp");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/large-article-2-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/large-article-2-mobile@2x.webp");
+    }
+  }
+}
+
+.now-block__column--large .news-item {
+  color: $white;
+}
+
+.now-block__item {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.now-block__column--large .now-block__item {
+  min-height: 430px;
+  box-sizing: border-box;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $gray;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 40px;
+
+  border-radius: 6px;
+
+  @media (max-width: $mobile-width) {
+    min-height: 300px;
+
+    padding: 32px 24px;
+  }
+}
+
+.now-block__column--small .now-block__item h3 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+
+  color: $black;
+
+  margin: 0;
+  padding: 5px 0;
+}
+
+.now-block__tag {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+.now-block__column--small img {
+  border-radius: 6px;
+  width: 100%;
+  object-fit: cover;
+
+  @media (max-width: $mobile-width) {
+    height: 180px;
+  }
+}
+
+.now-block__column--small .now-block__item {
+  margin-bottom: 33px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: calc(50% - 20px);
+
+    margin-bottom: 0;
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    &:nth-child(2n) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.now-block__item .news-item h3 {
+  color: $white;
+}
+
+.now-block__date {
+  font-size: 13px;
+  line-height: 26px;
+  font-style: italic;
+
+  padding-left: 26px;
+
+  position: relative;
+
+  margin: 0;
+}
+
+.now-block__date::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+
+  left: 0;
+  top: 4px;
+
+  background-image: url("../img/clock-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.now-block__link {
+  color: $dark-gray;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}

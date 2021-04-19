@@ -1,0 +1,184 @@
+.site-nav {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+  }
+}
+
+.site-nav__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+
+    padding-left: 40px;
+    padding-bottom: 149px;
+  }
+}
+
+.site-nav__toggle {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+
+    overflow: hidden;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}
+
+.site-nav--closed .site-nav__toggle::before {
+  @media (max-width: $tablet-width) {
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    left: 0;
+
+    width: 16px;
+    height: 2px;
+
+    background-color: $black;
+    box-shadow: -7px 5px 0 0 $black, 0 10px 0 0 $black;
+  }
+}
+
+.site-nav--opened .site-nav__toggle {
+  display: none;
+}
+
+@media (max-width: $mobile-width) {
+  .site-nav--closed .site-nav__list {
+    display: none;
+  }
+}
+
+.site-nav--nojs .site-nav__toggle {
+  display: none;
+}
+
+.site-nav__item {
+  margin-right: 22px;
+
+  &:first-child {
+    margin-right: 27px;
+  }
+
+  &:last-child {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $light-black;
+  font-size: 11px;
+  font-weight: bold;
+
+  opacity: 0.5;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.site-nav__link--active {
+  opacity: 1;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.site-nav__item--profile {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: inline-block;
+    vertical-align: middle;
+
+    padding-left: 46px;
+    position: relative;
+  }
+}
+
+.site-nav__icon {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    margin-right: 30px;
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.site-nav__icon--discovery {
+  fill: $white;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+}
+
+.site-nav__item--active .site-nav__icon {
+  @media (max-width: $mobile-width) {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+}
+
+.site-nav__item--profile::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background-image: url("../img/login-image@1x.jpg");
+  background-size: cover;
+}

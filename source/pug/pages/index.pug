@@ -1,0 +1,135 @@
+extends ../template/main
+
+block variables
+	- var title = 'Main page'
+	- var desc = 'Test'
+
+block content
+		main
+			section.main-block
+				.main-block__promo
+					.main-block__promo-wrapper
+						h1 WORLD NEWS
+						h2 Amazing places in America to visit.
+						p For some reason — this country, this city, this neighborhood, this particular street —  is the place you are living a majority of your life in.
+						a(class="main-block__link" href="#") LEARN MORE
+				.main-block__news.news
+					.buttons.buttons--news
+						h2 MORE NEWS
+						.buttons__wrapper
+							button(type="button" class="buttons__item buttons__item--prev")
+							button(type="button" class="buttons__item buttons__item--next")
+					.news__list
+						article.news__item.news-item
+							h3 TRAVEL
+							h4 Article title
+							p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat…
+							p.news-item__date 2 min ago
+						article.news__item.news-item
+							h3 TRAVEL
+							h4 Article title
+							p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat…
+							p.news-item__date 2 min ago
+			section.trending-block
+				.buttons
+					h2 TRENDING
+					.buttons
+							button(type="button" class="buttons__item buttons__item--prev")
+							button(type="button" class="buttons__item buttons__item--next")
+				ul.trending-block__list
+					li.trending-block__item
+						picture
+							// 1х: 327px; 2x: 654px
+							// 1х: 284px; 2x: 568px
+							// 1х: 360px; 2x: 720px
+							source(type="image/webp", media="(max-width: 767px)" srcset="img/trend-1-mobile@1x.webp 1x, img/trend-1-mobile@2x.webp 2x")
+							source(type="image/webp", media="(max-width: 1023px)" srcset="img/trend-1-tablet@1x.webp 1x, img/trend-1-tablet@2x.webp 2x")
+							source(type="image/webp", srcset="img/trend-1-desktop@1x.webp 1x, img/trend-1-desktop@2x.webp 2x")
+							source(type="image/jpg", media="(max-width: 767px)" srcset="img/trend-1-mobile@1x.jpg 1x, img/trend-1-mobile@2x.jpg 2x")
+							source(type="image/jpg", media="(max-width: 1023px)" srcset="img/trend-1-tablet@1x.jpg 1x, img/trend-1-tablet@2x.jpg 2x")
+							img(src="img/trend-1-desktop.jpg" srcset="img/trend-1-desktop.2pg 2x" alt="Trend image" width="360" height="180")
+						.news-item
+							h3 Dolore magna aliqua
+							p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.
+							p.news-item__date 2m ago
+					li.trending-block__item
+						picture
+							// 1х: 327px; 2x: 654px
+							// 1х: 284px; 2x: 568px
+							// 1х: 360px; 2x: 720px
+							source(type="image/webp", media="(max-width: 767px)" srcset="img/trend-2-mobile@1x.webp 1x, img/trend-2-mobile@2x.webp 2x")
+							source(type="image/webp", media="(max-width: 1023px)" srcset="img/trend-2-tablet@1x.webp 1x, img/trend-2-tablet@2x.webp 2x")
+							source(type="image/webp", srcset="img/trend-2-desktop@1x.webp 1x, img/trend-2-desktop@2x.webp 2x")
+							source(type="image/jpg", media="(max-width: 767px)" srcset="img/trend-2-mobile@1x.jpg 1x, img/trend-2-mobile@2x.jpg 2x")
+							source(type="image/jpg", media="(max-width: 1023px)" srcset="img/trend-2-tablet@1x.jpg 1x, img/trend-2-tablet@2x.jpg 2x")
+							img(src="img/trend-2-desktop.jpg" srcset="img/trend-2-desktop.2pg 2x" alt="Trend image" width="360" height="180")
+						.news-item
+							h3 Morbi eleifend a libero
+							p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.
+							p.news-item__date 1h ago
+					li.trending-block__item
+						picture
+							// 1х: 360px; 2x: 720px
+							source(type="image/webp" srcset="img/trend-3-desktop@1x.webp 1x, img/trend-3-desktop@2x.webp 2x")
+							img(src="img/trend-3-desktop.jpg" srcset="img/trend-3-desktop.2pg 2x" alt="Trend image" width="360" height="180")
+						.news-item
+							h3 Morbi eleifend a libero
+							p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.
+							p.news-item__date 3h ago
+			section.now-block
+				.buttons
+					h2 HAPPENING NOW
+					.buttons
+							button(type="button" class="buttons__item buttons__item--prev")
+							button(type="button" class="buttons__item buttons__item--next")
+				.now-block__inner
+					ul.now-block__column.now-block__column--large
+						li.now-block__item.now-block__item--large-1
+							p.now-block__tag TRAVEL
+							.news-item
+								h3 Dolore magna aliqua
+								p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.
+								p.news-item__date.news-item__date--white 2m ago
+						li.now-block__item.now-block__item--large-2
+							p.now-block__tag CITY
+							.news-item
+								h3 Dolore magna aliqua
+								p Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.
+								p.news-item__date.news-item__date--white 2m ago
+					ul.now-block__column.now-block__column--small
+						li.now-block__item
+							picture
+								// 1х: 327px; 2x: 654px
+								// 1х: 284px; 2x: 568px
+								// 1х: 360px; 2x: 720px
+								source(type="image/webp", media="(max-width: 767px)" srcset="img/small-article-1-mobile@1x.webp 1x, img/small-article-1-mobile@2x.webp 2x")
+								source(type="image/webp", media="(max-width: 1023px)" srcset="img/small-article-1-tablet@1x.webp 1x, img/small-article-1-tablet@2x.webp 2x")
+								source(type="image/webp", srcset="img/small-article-1-desktop@1x.webp 1x, img/small-article-1-desktop@2x.webp 2x")
+								source(type="image/jpg", media="(max-width: 767px)", srcset="img/small-article-1-mobile@1x.jpg 1x, img/small-article-1-mobile@2x.jpg 2x")
+								source(type="image/jpg", media="(max-width: 1023px)", srcset="img/small-article-1-tablet@1x.jpg 1x, img/small-article-1-tablet@2x.jpg 2x")
+								img(src="img/small-article-1-desktop.jpg" srcset="img/small-article-1-desktop.2pg 2x" alt="Trend image" width="360" height="210")
+							h3 Small title
+							p.now-block__date 4h ago by 
+								a(class="now-block__link" href="#") Worldnews
+						li.now-block__item
+							picture
+								// 1х: 327px; 2x: 654px
+								// 1х: 284px; 2x: 568px
+								// 1х: 360px; 2x: 720px
+								source(type="image/webp", media="(max-width: 767px)" srcset="img/small-article-2-mobile@1x.webp 1x, img/small-article-2-mobile@2x.webp 2x")
+								source(type="image/webp", media="(max-width: 1023px)", srcset="img/small-article-2-tablet@1x.webp 1x, img/small-article-2-tablet@2x.webp 2x")
+								source(type="image/webp" srcset="img/small-article-2-desktop@1x.webp 1x, img/small-article-2-desktop@2x.webp 2x")
+								source(type="image/jpg", media="(max-width: 767px)", srcset="img/small-article-2-mobile@1x.jpg 1x, img/small-article-2-mobile@2x.jpg 2x")
+								source(type="image/jpg", media="(max-width: 1023px)", srcset="img/small-article-2-tablet@1x.jpg 1x, img/small-article-2-tablet@2x.jpg 2x")
+								img(src="img/small-article-2-desktop.jpg" srcset="img/small-article-2-desktop.2pg 2x" alt="Trend image" width="360" height="210")
+							h3 Small title
+							p.now-block__date 3h ago by 
+								a(class="now-block__link" href="#") Days
+						li.now-block__item
+							picture
+								// 1х: 360px; 2x: 720px
+								source(type="image/webp", srcset="img/small-article-3-desktop@1x.webp 1x, img/small-article-3-desktop@2x.webp 2x")
+								img(src="img/small-article-3-desktop.jpg" srcset="img/small-article-3-desktop.2pg 2x" alt="Trend image" width="360" height="210")
+							h3 Small title
+							p.now-block__date 3h ago by 
+								a(class="now-block__link" href="#") Monica

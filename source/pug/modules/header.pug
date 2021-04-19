@@ -1,0 +1,73 @@
+header.header.header--opened.header--nojs
+  .header__inner
+    a(class="header__logo" href="#") LOGO
+    .header__site-nav.site-nav.site-nav--nojs
+      button(type="button", class="site-nav__toggle")
+        span.visually-hidden Открыть меню
+      ul.site-nav__list
+        li.site-nav__item.site-nav__item--active
+          svg(class="site-nav__icon", width="16", height="16")
+            use(xlink:href="img/sprite_auto.svg#home-icon") 
+          a(class="site-nav__link site-nav__link--active") HOME
+        li.site-nav__item
+          svg(class="site-nav__icon site-nav__icon--discovery", width="16", height="16")
+            use(xlink:href="img/sprite_auto.svg#discovery-icon") 
+          a(class="site-nav__link" href="#") DISCOVERY
+        li.site-nav__item
+          svg(class="site-nav__icon", width="15", height="14")
+            use(xlink:href="img/sprite_auto.svg#photo-icon") 
+          a(class="site-nav__link" href="#") PHOTOS
+        li.site-nav__item
+          svg(class="site-nav__icon", width="15", height="14")
+            use(xlink:href="img/sprite_auto.svg#mail-icon") 
+          a(class="site-nav__link" href="#") CONTACT
+        li.site-nav__item.site-nav__item--profile
+          a(class="site-nav__link" href="#") PROFILE
+    .header__login
+      a(class="header__login-link" href="#") 
+        span.visually-hidden PROFILE
+        picture
+          source(type="image/webp", srcset="img/login-image@1x.webp 1x, img/login-image@2x.webp 2x")
+          img(src="img/login-image@1x.jpg" srcset="img/login-image@2x.jpg 2x" alt="Login image" width="30" height="30")
+    .header__add-block
+      .header__add-nav.add-nav.add-nav--header
+        ul.add-nav__column
+          li.add-nav__item
+            a(class="add-nav__link" href="#") About
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Help
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Terms
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Guidlines
+        ul.add-nav__column
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Testimonials
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Advertise
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Integrations
+          li.add-nav__item
+            a(class="add-nav__link" href="#") Careers
+      .header__social.social
+        ul.social__list
+          li.social__item
+            a(class="social__link" href="#") 
+              span.visually-hidden Instagram link
+              svg(class="social__icon", width="16", height="16")
+                use(xlink:href="img/sprite_auto.svg#insta-icon")
+          li.social__item
+            a(class="social__link" href="#") 
+                span.visually-hidden Twitte link
+                svg(class="social__icon", width="16", height="16")
+                  use(xlink:href="img/sprite_auto.svg#tw-icon")
+          li.social__item
+            a(class="social__link" href="#") 
+              span.visually-hidden Facebook link
+              svg(class="social__icon", width="9", height="16")
+                use(xlink:href="img/sprite_auto.svg#fb-icon")
+          li.social__item
+            a(class="social__link" href="#") 
+              span.visually-hidden Pinterest link
+              svg(class="social__icon", width="16", height="16")
+                use(xlink:href="img/sprite_auto.svg#pinterest-icon")
