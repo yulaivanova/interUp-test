@@ -1,0 +1,44 @@
+.submenu {
+  @include list-reset;
+
+  visibility: hidden;
+  background: $gray;
+
+  position: absolute;
+  top: 100%;
+  left: -20px;
+
+  z-index: 10;
+
+  padding: 38px 20px 20px;
+
+  transition: 0.5s ease-in-out;
+}
+
+.site-nav__item:hover .submenu {
+  visibility: visible;
+
+  @media (max-width: $mobile-width) {
+    visibility: hidden;
+  }
+}
+
+.submenu__item {
+  padding-bottom: 20px;
+}
+
+.submenu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $light-black;
+  font-size: 11px;
+  font-weight: bold;
+
+  opacity: 0.5;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}

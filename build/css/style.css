@@ -551,7 +551,8 @@ template {
   display: none; }
 
 .site-nav__item {
-  margin-right: 22px; }
+  margin-right: 22px;
+  position: relative; }
   .site-nav__item:first-child {
     margin-right: 27px; }
   .site-nav__item:last-child {
@@ -624,6 +625,39 @@ template {
   border-radius: 50%;
   background-image: url("../img/login-image@1x.jpg");
   background-size: cover; }
+
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  visibility: hidden;
+  background: #f6f8f9;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  z-index: 10;
+  padding: 38px 20px 20px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+.site-nav__item:hover .submenu {
+  visibility: visible; }
+  @media (max-width: 767px) {
+    .site-nav__item:hover .submenu {
+      visibility: hidden; } }
+
+.submenu__item {
+  padding-bottom: 20px; }
+
+.submenu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #343638;
+  font-size: 11px;
+  font-weight: bold;
+  opacity: 0.5; }
+  .submenu__link:hover, .submenu__link:active, .submenu__link:focus {
+    opacity: 1; }
 
 .main-block {
   display: -webkit-box;
